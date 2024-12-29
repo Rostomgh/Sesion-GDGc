@@ -34,8 +34,10 @@ class SignupScreen extends StatelessWidget {
                 return "null";
               },
             ),
-            const SizedBox(height: 20,),
-              Custominput(
+            const SizedBox(
+              height: 20,
+            ),
+            Custominput(
               keyType: TextInputType.name,
               obscure: false,
               hint: 'Name',
@@ -47,8 +49,10 @@ class SignupScreen extends StatelessWidget {
                 return "null";
               },
             ),
-            const SizedBox(height: 20,),
-              Custominput(
+            const SizedBox(
+              height: 20,
+            ),
+            Custominput(
               keyType: TextInputType.name,
               obscure: false,
               hint: 'Name',
@@ -60,15 +64,16 @@ class SignupScreen extends StatelessWidget {
                 return "null";
               },
             ),
-
             const SizedBox(height: 40),
             Custombutton(
-              onpress: () {},
+              onpress: () {
+                Navigator.pushNamed(context, '/favorite');
+              },
               titleB: 'Sign Up',
             ),
             const SizedBox(height: 70),
             const Text('Or sign....'),
-              const SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -84,15 +89,6 @@ class SignupScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
 
 class FText extends StatelessWidget {
   const FText({

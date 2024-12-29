@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:fluuter_gdgc/Screen/SignUp.dart';
-
+import 'index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,17 +7,21 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home:const SignupScreen()
-        );
-        // home: const HomeS());
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp(
+          title: 'Flutter ',
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          onGenerateRoute: (settings) => AppRoute().generateRoute(settings),
+          home: const SignupScreen()),
+    );
+    // home: const HomeS());
   }
 }
