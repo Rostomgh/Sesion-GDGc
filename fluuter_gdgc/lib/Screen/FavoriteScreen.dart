@@ -17,37 +17,52 @@ class _FavoritescreenState extends State<Favoritescreen> {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          IconButton(onPressed: (){}, icon:  const Icon(Icons.search,size: 30,color:Appcolors.blackC,))
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.search,
+                size: 30,
+                color: Appcolors.blackC,
+              ))
         ],
       ),
       body: const Column(
         children: [
-          Text('Favorites',style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            color: Appcolors.blackC,
-          ),),
+          Text(
+            'Favorites',
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: Appcolors.blackC,
+            ),
+          ),
           Row_Category(),
-          CustomContainer(image: Assets.e_commerce, Firs_N: 'Shirt', Cloth: 'Shirt', price: '50',Color_C: 'Blue',),
-          CustomContainer(image: Assets.e_commerce, Firs_N: 'Longsleeve', Cloth: 'Shirt', price: '50',Color_C: 'Blue',),
-          CustomContainer(image: Assets.e_commerce, Firs_N: 'Shirt', Cloth: 'Shirt', price: '50',Color_C: 'Blue',),
-      
-
-
-           
+          CustomContainer(
+            image: Assets.e_commerce,
+            Firs_N: 'Shirt',
+            Cloth: 'Shirt',
+            price: '50',
+            Color_C: 'Blue',
+          ),
+          CustomContainer(
+            image: Assets.e_commerce,
+            Firs_N: 'Longsleeve',
+            Cloth: 'Shirt',
+            price: '50',
+            Color_C: 'Blue',
+          ),
+          CustomContainer(
+            image: Assets.e_commerce,
+            Firs_N: 'Shirt',
+            Cloth: 'Shirt',
+            price: '50',
+            Color_C: 'Blue',
+          ),
         ],
       ),
-    )
-    ;
+    );
   }
 }
-
-
-
-
-
-
-
 
 class Row_Category extends StatelessWidget {
   const Row_Category({
@@ -58,11 +73,16 @@ class Row_Category extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Customcategory(Name_Category: 'Summer',),
-        Customcategory(Name_Category: 'T-Shirts',),
-        Customcategory(Name_Category: 'Shirts',),
-    
+        Customcategory(
+          Name_Category: 'Summer',
+        ),
+        Customcategory(
+          Name_Category: 'T-Shirts',
+        ),
+        Customcategory(
+          Name_Category: 'Shirts',
+        ),
       ],
     );
   }
-} 
+}
